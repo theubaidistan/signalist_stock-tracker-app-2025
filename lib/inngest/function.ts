@@ -6,7 +6,6 @@ import { getWatchlistSymbolsByEmail } from "@/lib/actions/watchlist.actions";
 import { getNews } from "@/lib/actions/finnhub.actions";
 import { getFormattedTodayDate } from "@/lib/utils";
 
-
 export const sendSignUpEmail = inngest.createFunction(
   { id: 'sign-up-email' },
   { event: 'app/user.created'},
@@ -51,13 +50,12 @@ export const sendSignUpEmail = inngest.createFunction(
 
 export const sendDailyNewsSummary = inngest.createFunction(
   { id: 'daily-news-summary' },
-  [ { event: 'app/send.daily.news' }, { cron: '0 12 * * *' } ],
+  [ { event: 'app/send.daily.news' }, { cron: '* * * * *' } ],
   async ({ step }) => {
     // Step #1: Get all users for news delivery
     const users = await step.run('get-all-users', getAllUsersForNewsEmail)
 
     if(!users || users.length === 0) return { success: false, message: 'No users found for news email' };
-
 
     // Step #2: For each user, get watchlist symbols -> fetch news (fallback to general)
     const results = await step.run('fetch-user-news', async () => {
@@ -83,7 +81,7 @@ export const sendDailyNewsSummary = inngest.createFunction(
     });
 
     // Step #3: (placeholder) Summarize news via AI
-    const userNewsSummaries: { user: User; newsContent: string | null }[] = [];
+    const userNewsSummaries: { user: UserForNewsEmail; newsContent: string | null }[] = [];
 
     for (const { user, articles } of results) {
       try {
