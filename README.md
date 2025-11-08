@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://youtu.be/gu4pafNCXng" target="_blank">
-      <img src="public/readme/hero.webp" alt="Project Banner">
+      <img src="https://github.com/adrianhajdin/signalist_stock-tracker-app/raw/main/public/readme/hero.webp" alt="Project Banner">
     </a>
   <br />
 
@@ -163,7 +163,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 Assets and snippets used in the project can be found in the **[video kit](https://jsm.dev/stocks-kit)**.
 
 <a href="https://jsm.dev/stocks-kit" target="_blank">
-  <img src="public/readme/videokit.webp" alt="Video Kit Banner">
+  <img src="https://github.com/adrianhajdin/signalist_stock-tracker-app/raw/main/public/readme/videokit.webp" alt="Video Kit Banner">
 </a>
 
 ## <a name="more">🚀 More</a>
@@ -174,5 +174,5 @@ Enjoyed creating this project? Dive deeper into our PRO courses for a richer lea
 detailed explanations, cool features, and exercises to boost your skills. Give it a go!
 
 <a href="https://jsm.dev/stocks-jsmpro" target="_blank">
-  <img src="public/readme/jsmpro.webp" alt="Project Banner">
+  <img src="https://github.com/adrianhajdin/signalist_stock-tracker-app/raw/main/public/readme/jsmpro.webp" alt="Project Banner">
 </a>
